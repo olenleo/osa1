@@ -9,7 +9,8 @@ const Statistics = ({goodVal, neutralVal, badVal}) => {
   <StatisticsLine text = "neutral" value = {neutralVal} />
   <StatisticsLine text = "bad" value = {badVal} />
   <StatisticsLine text = "total" value = {goodVal + neutralVal + badVal} />
-  <StatisticsLine text = "average" value = {goodVal / badVal} />
+  <StatisticsLine text = "average" value = {goodVal / (goodVal + badVal)} />
+  <StatisticsLine text = "positives %" value = {100 * goodVal / (goodVal + neutralVal + badVal)} />
   
   
   </div>
