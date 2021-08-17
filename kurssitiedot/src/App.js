@@ -18,10 +18,11 @@ const App = () => {
       }
     ]
   }
-
-  return (
  
+  return (
+
     <div>
+      
       <Header course= {course} />
       <Content p1 = {course.parts[0]} p2 = {course.parts[1]} p3 = {course.parts[2]}/>
       <Total p1 = {course.parts[0]} p2 = {course.parts[1]} p3 = {course.parts[2]}/>
@@ -29,10 +30,14 @@ const App = () => {
   )
 }
 
-const Header = ( props ) => { 
+const Header = ( {course} ) => { 
+  console.log(" Header method, props:")
+  
+  console.log(course)
+  
   return (
     <div>
-      <h1> {props.course.name}</h1>
+      <h1> {course.name}</h1>
     </div>
   )
   }
