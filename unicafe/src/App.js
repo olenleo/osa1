@@ -6,13 +6,14 @@ const Statistics = ({goodVal, neutralVal, badVal}) => {
   <div>
   <h1>Statistics</h1>
   <table>
-  
+  <tbody>
   <tr><StatisticsLine text = "good" value = {goodVal} /></tr>
   <tr><StatisticsLine text = "neutral" value = {neutralVal} /></tr>
   <tr><StatisticsLine text = "bad" value = {badVal} /></tr>
   <tr><StatisticsLine text = "total" value = {goodVal + neutralVal + badVal} /></tr>
   <tr><StatisticsLine text = "average" value = {goodVal / (goodVal + badVal)} /></tr>
   <tr><StatisticsLine text = "positives %" value = {100 * goodVal / (goodVal + neutralVal + badVal)} /></tr>
+  </tbody>
   </table>
   
   </div>
